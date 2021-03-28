@@ -55,7 +55,8 @@ class App():
         if (self.minutes == 0 and self.seconds == 0):
             self.deleteMessages()
             self.minutes = 10
-            self.view.destroy()
+            if (not self.view): 
+                self.view.destroy()
             #call delete function
         #if we reach the end of any minute other than 0
         elif (self.seconds == 0):
